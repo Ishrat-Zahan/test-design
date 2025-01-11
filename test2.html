@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .coursecarousel {
+            width: 100%;
+            overflow-x: scroll;
+            padding: 30px;
+            padding-top: 80px;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .coursecarousel__container {
+            white-space: nowrap;
+            margin: 70px 0px;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .categories__title {
+            color: rgb(77, 55, 102);
+            font-size: 28px;
+            position: absolute;
+            padding-left: 30px;
+        }
+
+        .coursecarousel-item {
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            background-color: #95bcd6;
+            overflow: hidden;
+            margin-right: 10px;
+            margin-top: 70px;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-transition: 1000ms all;
+            transition: 1000ms all;
+            -webkit-transform-origin: center left;
+            transform-origin: center left;
+            position: relative;
+        }
+
+        .coursecarousel-item:hover~.coursecarousel-item {
+            -webkit-transform: translate3d(100px, 0, 0);
+            transform: translate3d(100px, 0, 0);
+        }
+
+        .coursecarousel__container:hover .coursecarousel-item {
+            opacity: 0.3;
+        }
+
+        .coursecarousel__container:hover .coursecarousel-item:hover {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            opacity: 1;
+        }
+
+        .coursecarousel-item__img {
+            width: 200px;
+            height: 250px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .coursecarousel-item__details {
+            background: -webkit-gradient(linear,
+                    left bottom,
+                    left top,
+                    from(rgba(0, 0, 0, 0.9)),
+                    to(rgba(0, 0, 0, 0)));
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0) 100%);
+            font-size: 10px;
+            opacity: 0;
+            -webkit-transition: 450ms opacity;
+            transition: 450ms opacity;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .coursecarousel-item__details:hover {
+            opacity: 1;
+        }
+
+        .coursecarousel-item__details span {
+            /* width: 10px;
+  height: 10px; */
+            font-size: 0.9rem;
+            color: #2ecc71;
+            /* background-color: white; */
+        }
+
+        .coursecarousel-item__details .controls {
+            padding-top: 180px;
+        }
+
+        .coursecarousel-item__details .coursecarousel-item__details--title,
+        .coursecarousel-item__details--subtitle {
+            color: #fff;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="coursecarousel">
+        <h2 class="categories__title">My List</h2>
+        <div class="coursecarousel__container">
+            <div class="coursecarousel-item">
+                <img class="coursecarousel-item__img"
+                    src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="people" />
+                <div class="coursecarousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="coursecarousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="coursecarousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+            <div class="coursecarousel-item">
+                <img class="coursecarousel-item__img"
+                    src="https://images.pexels.com/photos/1785001/pexels-photo-1785001.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="people" />
+                <div class="coursecarousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="coursecarousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="coursecarousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+            <div class="coursecarousel-item">
+                <img class="coursecarousel-item__img"
+                    src="https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    alt="people" />
+                <div class="coursecarousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="coursecarousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="coursecarousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+
+
+            <div class="coursecarousel-item">
+                <img class="coursecarousel-item__img"
+                    src="https://images.pexels.com/photos/6945/sunset-summer-golden-hour-paul-filitchkin.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="people" />
+                <div class="coursecarousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="coursecarousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="coursecarousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+
+            <div class="coursecarousel-item">
+                <img class="coursecarousel-item__img"
+                    src="https://images.pexels.com/photos/1964471/pexels-photo-1964471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    alt="people" />
+                <div class="coursecarousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="coursecarousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="coursecarousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
