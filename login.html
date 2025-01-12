@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+     
+        .signin-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        /* Left Section */
+        .loginleft-section {
+            flex: 1;
+            background: linear-gradient(135deg, #b999d6 60%, #c3a3e0 40%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            color: white;
+            box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .loginleft-section img {
+            width: 150px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .loginleft-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .loginleft-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .loginleft-section p {
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* Right Section */
+        .loginright-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background-color: white;
+        }
+
+        .loginform-card {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .loginform-card:hover {
+        
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .loginform-card h3 {
+            color: #6a32d4;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logininput {
+            border-radius: 30px;
+            padding: 14px 18px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+
+        .logininput:focus {
+            border-color: #6a32d4;
+            box-shadow: 0 0 8px rgba(106, 50, 212, 0.2);
+        }
+
+        .btn-signin {
+            background: linear-gradient(90deg, #a450f7, #b06df7);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background 0.3s ease;
+            width: 100%;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .btn-signin:hover {
+            background: linear-gradient(90deg, #9442e5, #9b59e5);
+            transform: translateY(-4px);
+            box-shadow: 0 5px 20px rgba(148, 66, 229, 0.3);
+        }
+
+        .placeholder-sm::placeholder {
+            font-size: 14px;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .signin-wrapper {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .loginleft-section {
+                display: none;
+            }
+
+            .loginform-card {
+                width: 100%;
+                padding: 30px;
+            }
+
+            .btn-signin {
+                padding: 16px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signin-wrapper">
+        <!-- Left Section -->
+        <div class="loginleft-section">
+            <img src="/asset/logo.png" alt="Logo">
+            <h2 class="">Welcome to Food Safety</h2>
+            <p>Your Trusted E-Learning Management System</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="loginright-section">
+            <div class="loginform-card">
+                <h3>Log in</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control logininput placeholder-sm" id="email"
+                            placeholder="Enter your email address">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control logininput placeholder-sm" id="password"
+                            placeholder="Enter your password">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-signin">Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
